@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Contact Us</h1>
+    </head>
+    <body>
+        <h2>Full name</h2>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="">
+        </form>
+        <h2>Email</h2>
+        <form>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" value=""><br>
+        </form>
+        <h2>Leave us a few words</h2>
+        <textarea id="fwords" name="fwords" rows="4" cols="50"></textarea> 
+        <br>
+        <button onclick="myFunction()">submit</button>
+        <br><br>
+        <textarea id="blank" name="blank" rows="4" cols="50"></textarea> 
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("fname").value;
+                var y = document.getElementById("lname").value;
+                var z = document.getElementById("email").value;
+                var out = x + y + z;
+                var split = out.split("");
+                document.getElementById("blank").innerHTML = split;
+                console.log(out.split(""))
+            }
+        </script>
+
+    </body>
+</html>
